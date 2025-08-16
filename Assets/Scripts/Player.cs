@@ -8,13 +8,10 @@ public class Player : MonoBehaviour
     Animator anim;
 
     [SerializeField]
-    private Sprite jumpUp;
-
-    [SerializeField]
-    private Sprite jumpDown;
+    private Sprite fallSprite;
 
     private bool isGrounded = true; 
-    private bool canJumpTwice = false; // 
+    private bool canJumpTwice = false; 
 
     [SerializeField]
     public float jumpPower;
@@ -29,12 +26,13 @@ public class Player : MonoBehaviour
     void Update()
     {
         Jump();
+        Fall();
     }
 
     private void Jump()
     {
         //Animation
-        if (rigid.linearVelocity.y != 0) //y축 이동이 있을때 즉 점프를 할 때
+        if (rigid.linearVelocity.y != 0) //위로 y축 이동이 있을때 즉 점프를 할 때
         {
             anim.SetBool("onSky", true);
         } else
@@ -43,7 +41,7 @@ public class Player : MonoBehaviour
         }
 
         //물리 적용
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
         {
             rigid.linearVelocity = new Vector2(rigid.linearVelocity.x, 0);
             rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
@@ -51,7 +49,7 @@ public class Player : MonoBehaviour
             canJumpTwice = true;
 
         }
-        else if (canJumpTwice && Input.GetButtonDown("Jump"))
+        else if (canJumpTwice && Input.GetKeyDown(KeyCode.UpArrow))
         {
             rigid.linearVelocity = new Vector2(rigid.linearVelocity.x, 0);
             rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
@@ -60,6 +58,19 @@ public class Player : MonoBehaviour
         }
         
     }
+
+    private void Fall()
+    {
+        if (Input.GetKeyDown(KeyCode.DownArrow) && !isGrounded)
+        {
+            rigid.linearVelocity = new Vector2(rigid.linearVelocity.x, -jumpPower);
+        }
+       
+    }
+
+    
+
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

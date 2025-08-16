@@ -13,11 +13,6 @@ public class FruitSpawner : MonoBehaviour
 
     private int lastLevelUpEatCount = 0; // 마지막 레벨업 시 먹은 과일 수 초기화 (한 프레임에서 여러 개의 과일을 먹을 수 있으므로 필요)
 
-    void Awake()
-    {
-        
-    }
-
     void Start()
     {
         StartFruitsRoutine();

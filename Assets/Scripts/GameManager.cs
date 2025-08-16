@@ -18,7 +18,10 @@ public class GameManager : MonoBehaviour
 
 
     [SerializeField]
-    private TextMeshProUGUI text; // 점수를 표시할 TextMeshProUGUI 컴포넌트
+    private TextMeshProUGUI text1; // 점수를 표시할 TextMeshProUGUI 컴포넌트
+
+    [SerializeField]
+    private TextMeshProUGUI text2; // 점수를 표시할 TextMeshProUGUI 컴포넌트
 
     [SerializeField]
     private GameObject gameOverPanel; // 게임 오버 패널
@@ -31,12 +34,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void IncreaseScore()
+    public void IncreaseScore(int value)
     {
-        score += 1; // 과일 획득 시 점수 증가
+        score += value;
         eatCount += 1; // 과일 획득 수 증가
-        //Debug.Log("과일 획득 수: " + eatCount);
-        text.SetText(score.ToString()); // 점수 표시 업데이트
+        Debug.Log("젤리를 먹음! +" + value + "점");
+        text1.SetText(score.ToString()); // 점수 표시 업데이트
         //Debug.Log("과일을 먹었습니다! 점수 증가"); 
     }
 
@@ -81,12 +84,24 @@ public class GameManager : MonoBehaviour
 
     void showGameOverPanel() // 게임 오버 패널 활성화 메서드 정의
     {
+        Debug.Log("게임오버 시점 점수: " + score);
         gameOverPanel.SetActive(true); 
+        text2.SetText(score.ToString()); // 최종 점수 표시 업데이트
     }
 
     public void PlayAgain() // playagain 버튼 클릭 시 호출되는 메서드
     {
         SceneManager.LoadScene("SampleScene");
+    }
+
+    public void GameStart() // 홈화면에서 게임 시작 버튼 클릭 시 호출되는 메서드
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
+
+    public void GoToHome() // 게임 오버 패널에서 홈버튼 클릭 시 호출되는 메서드
+    {
+        SceneManager.LoadScene("HomeScene");
     }
     
     

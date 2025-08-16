@@ -9,6 +9,9 @@ public class Fruits : MonoBehaviour
     private float minX = -10f;
     private float moveSpeed;
 
+    [SerializeField]
+    private int scoreValue = 1;
+
 
     void Awake()
     {
@@ -31,7 +34,7 @@ public class Fruits : MonoBehaviour
 
         if (other.gameObject.tag == "Player")
         {
-            GameManager.instance.IncreaseScore();
+            GameManager.instance.IncreaseScore(scoreValue); //점수 증가
             Destroy(gameObject); // 과일이 플레이어와 충돌하면 과일 오브젝트를 제거
         }
 
