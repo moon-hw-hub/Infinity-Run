@@ -11,6 +11,8 @@ public class FruitSpawner : MonoBehaviour
     [SerializeField]
     private float spawnInterval = 0.1f; // 과일 생성 주기
 
+    private int lastLevelUpEatCount = 0; // 마지막 레벨업 시 먹은 과일 수 초기화 (한 프레임에서 여러 개의 과일을 먹을 수 있으므로 필요)
+
     void Awake()
     {
         
@@ -37,7 +39,7 @@ public class FruitSpawner : MonoBehaviour
         while (true)
         {
             SpawnFruits();
-            Debug.Log("괴일이 생성되었습니다");
+            //Debug.Log("괴일이 생성되었습니다");
             yield return new WaitForSeconds(spawnInterval); // 장애물 생성 간격 대기
 
 
@@ -49,9 +51,11 @@ public class FruitSpawner : MonoBehaviour
         Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y, 0); // 과일 생성 위치
         //currentIndex = 0;
 
-        if (GameManager.instance.eatCount % 150 == 0 && GameManager.instance.eatCount != 0)
+        if (GameManager.instance.eatCount - lastLevelUpEatCount >= 150) //크 지렸다
         {
             GameManager.instance.SetGameLevelUp(); //ChangeFruit(); // eatCount가 150 이상이면 과일 변경
+            lastLevelUpEatCount = GameManager.instance.eatCount; // 마지막 레벨업 시 먹은 과일 수 갱신
+            Debug.Log("레벨업 시 먹은 과일 수 저장");
         }
         
         GameObject fruitObject = Instantiate(fruits[currentIndex], spawnPos, Quaternion.identity);

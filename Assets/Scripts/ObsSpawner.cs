@@ -37,7 +37,7 @@ public class ObsSpawner : MonoBehaviour
         while (true)
         {
             SpawnObs();
-            Debug.Log("장애물이 생성되었습니다");
+            //Debug.Log("장애물이 생성되었습니다");
             yield return new WaitForSeconds(spawnInterval); // 장애물 생성 간격 대기
 
             

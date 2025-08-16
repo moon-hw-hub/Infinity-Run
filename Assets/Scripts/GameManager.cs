@@ -35,9 +35,9 @@ public class GameManager : MonoBehaviour
     {
         score += 1; // 과일 획득 시 점수 증가
         eatCount += 1; // 과일 획득 수 증가
-        Debug.Log("과일 획득 수: " + eatCount); // 콘솔에 과일 획득 수 출력
+        //Debug.Log("과일 획득 수: " + eatCount);
         text.SetText(score.ToString()); // 점수 표시 업데이트
-        Debug.Log("과일을 먹었습니다! 점수 증가"); // 콘솔에 점수 출력
+        //Debug.Log("과일을 먹었습니다! 점수 증가"); 
     }
 
     public void SetGameLevelUp() // 구현할 것 : 장애물과 젤리 생성 주기 단축, 게임 속도 증가, 과일 종류 변경
