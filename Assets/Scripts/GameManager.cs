@@ -103,7 +103,13 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("HomeScene");
     }
-    
-    
+
+    public void QuitGame() // 게임 종료 버튼 클릭 시 호출되는 메서드
+    {
+        Application.Quit(); // 게임 종료
+        Debug.Log("게임을 종료합니다.");
+    }
+
+
 
 }
