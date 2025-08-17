@@ -6,7 +6,6 @@ public class ParallaxBackground : MonoBehaviour // 배경 패럴릭스 스크롤링 구현
     private Transform target; // 현재 배경과 이어지는 배경
 
     private float scrollAmount; // 스크롤 양
-
     private float moveSpeed;
 
     [SerializeField]

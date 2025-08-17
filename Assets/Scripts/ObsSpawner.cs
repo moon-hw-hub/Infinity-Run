@@ -1,7 +1,5 @@
 using UnityEngine;
 using System.Collections;
-
-
 public class ObsSpawner : MonoBehaviour
 {
     [SerializeField]
@@ -12,14 +10,11 @@ public class ObsSpawner : MonoBehaviour
 
     private float spawnPosY; // 각 장애묻들의 생성 위치 Y 좌표
     private int obsIndex; // 장애물 인덱스                      
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         StartObsRoutine();
     }
     
-
     void StartObsRoutine()
     {
         StartCoroutine("ObsRoutine");
@@ -33,17 +28,12 @@ public class ObsSpawner : MonoBehaviour
     IEnumerator ObsRoutine()
     {
         yield return new WaitForSeconds(1f);
-
         while (true)
         {
             SpawnObs();
-            //Debug.Log("장애물이 생성되었습니다");
             yield return new WaitForSeconds(spawnInterval); // 장애물 생성 간격 대기
-
-            
         }
     }
-
     void SpawnObs()
     {
         obsIndex = Random.Range(0, obstacles.Length); // 장애물 인덱스 랜덤 생성

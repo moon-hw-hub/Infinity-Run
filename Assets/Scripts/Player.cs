@@ -1,4 +1,3 @@
-using UnityEditor;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -21,8 +20,6 @@ public class Player : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         Jump();
@@ -67,11 +64,6 @@ public class Player : MonoBehaviour
         }
        
     }
-
-    
-
-
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Platform")

@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 
 public class Fruits : MonoBehaviour
@@ -38,8 +37,5 @@ public class Fruits : MonoBehaviour
             Destroy(gameObject); // 과일이 플레이어와 충돌하면 과일 오브젝트를 제거
         }
 
-
-    }
-
-    
+    }   
 }

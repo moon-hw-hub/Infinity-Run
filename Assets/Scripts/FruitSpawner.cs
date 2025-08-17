@@ -18,7 +18,6 @@ public class FruitSpawner : MonoBehaviour
         StartFruitsRoutine();
     }
 
-
     void StartFruitsRoutine()
     {
         StartCoroutine("FruitsRoutine");
@@ -34,19 +33,14 @@ public class FruitSpawner : MonoBehaviour
         while (true)
         {
             SpawnFruits();
-            //Debug.Log("괴일이 생성되었습니다");
             yield return new WaitForSeconds(spawnInterval); // 장애물 생성 간격 대기
-
-
         }
     }
 
     void SpawnFruits()
     {
         Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y, 0); // 과일 생성 위치
-        //currentIndex = 0;
-
-        if (GameManager.instance.eatCount - lastLevelUpEatCount >= 150) //크 지렸다
+        if (GameManager.instance.eatCount - lastLevelUpEatCount >= 150) 
         {
             GameManager.instance.SetGameLevelUp(); //ChangeFruit(); // eatCount가 150 이상이면 과일 변경
             lastLevelUpEatCount = GameManager.instance.eatCount; // 마지막 레벨업 시 먹은 과일 수 갱신
@@ -68,9 +62,5 @@ public class FruitSpawner : MonoBehaviour
         }
         
     }
-
-    
-
-
 
 }
