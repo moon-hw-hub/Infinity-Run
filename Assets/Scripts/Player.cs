@@ -3,7 +3,6 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     Rigidbody2D rigid;
-    SpriteRenderer spriteRenderer;
     Animator anim;
 
     [SerializeField]
@@ -17,7 +16,6 @@ public class Player : MonoBehaviour
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
     }
     void Update()
