@@ -14,7 +14,7 @@ public class Platform : MonoBehaviour
         transform.Translate(-1 * moveSpeed * Time.deltaTime, 0, 0); // 왼쪽으로 이동
         if (transform.position.x <= -18) // 플랫폼이 화면 밖으로 나가면
         {
-            transform.Translate(18, 0, 0); 
+            transform.Translate(18, 0, 0); //처음 위치로 되돌림
         }
     }
 }
