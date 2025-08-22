@@ -15,7 +15,7 @@
 - 참여 인원 : 1인(개인 프로젝트)
 
 ## 게임 설명
-|![image](https://user-images.githubusercontent.com/66003567/216818254-18683c3f-af80-4009-b2cc-35bdee865f23.png)|![image](https://user-images.githubusercontent.com/66003567/216818272-8749569b-b217-4572-9738-32b0058459f4.png)|
+|<img width="480" height="270" alt="Image" src="https://github.com/user-attachments/assets/1ce2529c-3790-4d17-8a86-a24e9a5bc767">||
 |:---:|:---:|
 |시작 화면|게임 진행 화면|
 
