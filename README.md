@@ -40,7 +40,7 @@
 |방향키|⬆️|점프 상태에서 ⬆️|⬇️|
 
 ## 실행 영상
-[Click here to watch video](https://drive.google.com/file/d/1dQlKmYTea08Hy69IyNEXCY4oXtszPHVV/view?usp=sharing)
+[Click here to watch video](https://drive.google.com/file/d/1dQlKmYTea08Hy69IyNEXCY4oXtszPHVV/view?usp=sharing)<br>줌으로 녹화하는 과정에서 약간의 렉이 발생하였습니다.
 
 ## 다운로드
 [Click here to download](https://drive.google.com/file/d/1i1-mPt2SE6j3Orl7YgNgK0Hrb2txNsJG/view?usp=sharing)
