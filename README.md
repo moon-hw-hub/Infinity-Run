@@ -4,10 +4,11 @@
 </div>
 
 ## 목차
-  - 개요
-  - 게임 설명
-  - 게임 플레이 방식
-  - 다운로드
+  - [개요](#개요)
+  - [게임 설명](#게임-설명)
+  - [게임 플레이 방식](#게임-플레이-방식)
+  - [실행 영상](#실행-영상)
+  - [게임 다운로드](#게임-다운로드)
 
 ## 개요
 - 프로젝트 이름: Infitiny Run 
@@ -42,5 +43,5 @@
 ## 실행 영상
 [Click here to watch video](https://drive.google.com/file/d/1dQlKmYTea08Hy69IyNEXCY4oXtszPHVV/view?usp=sharing)<br>줌으로 녹화하는 과정에서 약간의 렉이 발생하였습니다.
 
-## 다운로드
+## 게임 다운로드
 [Click here to download](https://drive.google.com/file/d/1i1-mPt2SE6j3Orl7YgNgK0Hrb2txNsJG/view?usp=sharing)
