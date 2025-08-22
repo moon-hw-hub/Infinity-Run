@@ -40,4 +40,4 @@
 |방향키|⬆️|점프 상태에서 ⬆️|⬇️|
 
 ## 다운로드
-[Click here to download] (https://drive.google.com/file/d/1i1-mPt2SE6j3Orl7YgNgK0Hrb2txNsJG/view?usp=sharing)
+[Click here to download](https://drive.google.com/file/d/1i1-mPt2SE6j3Orl7YgNgK0Hrb2txNsJG/view?usp=sharing)
