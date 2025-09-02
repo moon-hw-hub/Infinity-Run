@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
     Rigidbody2D rigid;
     Animator anim;
 
@@ -36,7 +37,7 @@ public class Player : MonoBehaviour
         }
 
         //물리 적용
-        if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
+        if (Input.GetButtonDown("Up") && isGrounded)
         {
             rigid.linearVelocity = new Vector2(rigid.linearVelocity.x, 0);
             rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
@@ -44,19 +45,18 @@ public class Player : MonoBehaviour
             canJumpTwice = true;
 
         }
-        else if (canJumpTwice && Input.GetKeyDown(KeyCode.UpArrow))
+        else if (canJumpTwice && Input.GetButtonDown("Up"))
         {
             rigid.linearVelocity = new Vector2(rigid.linearVelocity.x, 0);
             rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             canJumpTwice = false;
-
         }
         
     }
 
     private void Fall()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow) && !isGrounded)
+        if (Input.GetButtonDown("Down") && !isGrounded)
         {
             rigid.linearVelocity = new Vector2(rigid.linearVelocity.x, -jumpPower);
         }
