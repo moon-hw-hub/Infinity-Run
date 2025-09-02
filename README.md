@@ -44,4 +44,4 @@
 [Click here to watch video](https://drive.google.com/file/d/1dQlKmYTea08Hy69IyNEXCY4oXtszPHVV/view?usp=sharing)<br>줌으로 녹화하는 과정에서 약간의 렉이 발생하였습니다.
 
 ## 게임 다운로드
-[Click here to download](https://drive.google.com/drive/folders/1jWrUZlZtYCaosARI8Qm73E9HpAHNHnhY?usp=sharing)
+[Click here to download](https://drive.google.com/file/d/1kUKgMZqVyu-rzH-9mSRm0K7PvNxcGvtn/view?usp=sharing)
